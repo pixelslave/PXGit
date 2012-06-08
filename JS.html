@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+
+<body>
+<html>
+ <div id='container'>
+ <table id="myTable">
+ <tr>
+   <th>&nbsp;</th>
+   <th>COL1</th>
+   <th>COL2</th>
+   <th>COL3</th>
+   <th>COL4</th>
+ </tr>
+ <tr>
+   <th>ROW1</th>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+ </tr>
+ <tr>
+   <th>ROW2</th>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+ </tr>
+ </table>
+<script>
+
+$(document).ready (function() {
+	
+	
+$('td').each(function() {
+		
+var myCol = $(this).index();
+		
+var myRow = $(this).closest('tr').index();
+		
+$(this).text('ROW'+myRow+' COL'+myCol);
+    	
+
+});
+
+});
+</script>
+
+
+
+ </div>
+
+
+
+</body>
+</html>
